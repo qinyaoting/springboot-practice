@@ -6,12 +6,19 @@
 
     <groupId>com.xyz</groupId>
     <artifactId>SpringBoot-Practice</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>AOP</module>
-        <module>Di</module>
-        <module>JavaConfig</module>
+        <module>ch1-java-config</module>
+        <module>ch1-aop</module>
+        <module>ch1-di</module>
+        <module>ch2-bean-scope</module>
+        <module>ch2-inject-property</module>
+        <module>ch2-bean-prepost</module>
+        <module>ch2-determine-profiles</module>
+        <module>ch2-beans-message</module>
+        <module>ch3-aware</module>
     </modules>
 
 
