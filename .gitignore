@@ -22,3 +22,6 @@
 hs_err_pid*
 */*.iml
 .idea/*.*
+/ch1-aop/.idea/
+/ch1-di/.idea/
+/ch1-java-config/.idea/

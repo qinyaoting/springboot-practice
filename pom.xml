@@ -19,6 +19,10 @@
         <module>ch2-determine-profiles</module>
         <module>ch2-beans-message</module>
         <module>ch3-aware</module>
+        <module>ch3-asyn-task</module>
+        <module>ch3-scheduling</module>
+        <module>ch3-conditional</module>
+        <module>ch3-combined-annotation</module>
     </modules>
 
 
