@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationEvent;
  * To change this template use File | Settings | File Templates.
  * Description:
  */
-public class DemoEvent extends ApplicationEvent {
+public class DemoEvent extends ApplicationEvent {   //需要继承ApplicationEvent
 
     private String msg;
 

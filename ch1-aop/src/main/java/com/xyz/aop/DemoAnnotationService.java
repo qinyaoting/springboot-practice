@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 public class DemoAnnotationService {
 
 
+    // 业务方法, 增加注解, 使切面能找到该方法
     @Action(name = "注解式拦截add操作")
     public void add(){}
 

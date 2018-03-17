@@ -17,20 +17,24 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // 使用面向切面的方法，　来给普通方法增加类日志功能，　
-        // 好处是不用修改业务代码，　就可以增加功能
+        // 通常日志功能, 需要在业务代码中添加log.debug()这样的代码
+        // 使用面向切面的方法，　来给法增加类似日志功能，　而不需要修改业务方法,
+        //
 
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(AopConfig.class);
 
+        // DemoAnnotationService类中add方法用注解进行了标注
         DemoAnnotationService annotationService =
                 context.getBean(DemoAnnotationService.class);
-
+        // DemoMethodService类中add方法就是一个普通的方法, 原有的逻辑都不用修改
         DemoMethodService methodService =
                 context.getBean(DemoMethodService.class);
 
         annotationService.add();
         methodService.add();
+
+        // 关键在 LogAspect中
         context.close();
     }
 }

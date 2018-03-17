@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * Description:
  */
 @Component
-public class DemoPublisher {
+public class MessagePublisher {
 
     @Autowired
     private ApplicationContext applicationContext;

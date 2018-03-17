@@ -23,7 +23,7 @@ public class JSR250Service {
         System.out.println("JSR250Service construct");
     }
 
-    @PreDestroy
+    @PreDestroy         //在bean对象销毁前调用destroy方法
     public void destroy(){  //3.在销毁前调用destroy方法
         System.out.println("JSR250Service destroy");
     }

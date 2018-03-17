@@ -18,10 +18,10 @@ public class Main {
 
         // 切换dev或者prod环境
         AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext();
+                new AnnotationConfigApplicationContext();       // 不需要传入配置类
 
         context.getEnvironment().setActiveProfiles("prod");
-        context.register(ProfileConfig.class);
+        context.register(ProfileConfig.class);          //注册配置类
         context.refresh();
 
         DemoBean demoBean =

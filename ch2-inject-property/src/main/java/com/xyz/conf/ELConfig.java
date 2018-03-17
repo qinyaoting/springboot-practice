@@ -9,8 +9,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.Resource;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.TreeMap;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,7 +28,7 @@ import org.springframework.core.io.Resource;
  */
 @Configuration
 @ComponentScan("com.xyz")
-@PropertySource("test.properties")
+@PropertySource(value = "classpath:/test.properties",ignoreResourceNotFound = true)
 public class ELConfig {
 
     @Value("I love u!")
@@ -31,41 +37,45 @@ public class ELConfig {
     @Value("#{systemProperties['os.name']}")    //读取系统信息,
     private String osName;
 
+    @Value("#{systemProperties}")    //读取系统
+    private Properties systemProperties;
+
     @Value("#{T(java.lang.Math).random() * 100.0}")     //调用jdk中的方法
     private double randomNum;
 
     @Value("#{demoService.another}")    //其他的类中的属性
     private String fromAnother;
 
-    @Value("classpath:com/xyz/el/test.txt")
+    @Value("classpath:/test.txt")       //读取文件
     private Resource testFile;
 
-    @Value("http://www.baidu.com")
+    @Value("http://www.baidu.com")      //读取网络资源
     private Resource testUrl;
 
 
-//    @Value("${book.name}")
-//    private String bookName;
+    @Value("${book.name}")              //读取配置文件中的值
+    private String bookName;
 
     @Autowired
     private Environment environment;
-
-    @Bean
-    public static PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
-        return new PropertyPlaceholderConfigurer();
-    }
 
     public void outputResource() {
         try {
             System.out.println(normal);
             System.out.println(osName);
+            System.out.println("System Properties total:" + systemProperties.size());
+            //systemProperties.forEach((k,v) -> System.out.println("---" + k + ":" + v));
+            Map<String, String> map = new TreeMap<String, String>((Map) systemProperties);
+            map.forEach((k,v) -> System.out.println("---" +k + ':' + v));
             System.out.println(randomNum);
             System.out.println(fromAnother);
             System.out.println(IOUtils.toString(testFile.getInputStream()));
             System.out.println(IOUtils.toString(testUrl.getInputStream()));
-//            System.out.println(bookName);
+            System.out.println(bookName);
             System.out.println(environment.getProperty("book.author"));
-        } catch (Exception e) {}
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public String getNormal() {
@@ -116,13 +126,13 @@ public class ELConfig {
         this.testUrl = testUrl;
     }
 
-//    public String getBookName() {
-//        return bookName;
-//    }
-//
-//    public void setBookName(String bookName) {
-//        this.bookName = bookName;
-//    }
+    public String getBookName() {
+        return bookName;
+    }
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
 
     public Environment getEnvironment() {
         return environment;

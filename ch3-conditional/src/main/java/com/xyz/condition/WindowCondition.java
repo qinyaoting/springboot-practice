@@ -1,4 +1,4 @@
-package com.xyz.service;
+package com.xyz.condition;
 
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;
@@ -12,9 +12,9 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
  * To change this template use File | Settings | File Templates.
  * Description:
  */
-public class LinuxCondition implements Condition {
+public class WindowCondition implements Condition {
     @Override
     public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata annotatedTypeMetadata) {
-        return conditionContext.getEnvironment().getProperty("os.name").contains("Linux");
+        return conditionContext.getEnvironment().getProperty("os.name").contains("Windows");
     }
 }

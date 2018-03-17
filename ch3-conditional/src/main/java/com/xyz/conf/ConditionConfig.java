@@ -1,8 +1,8 @@
 package com.xyz.conf;
 
-import com.xyz.service.LinuxCondition;
+import com.xyz.condition.LinuxCondition;
 import com.xyz.service.LinuxService;
-import com.xyz.service.WindowCondition;
+import com.xyz.condition.WindowCondition;
 import com.xyz.service.WindowsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;

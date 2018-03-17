@@ -16,10 +16,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
 
     public static void main(String[] args) {
+
+
+        // 根据不同的条件, 返回不同的bean
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(ConditionConfig.class);
-
-
 
         ListService service =
                 context.getBean(ListService.class);

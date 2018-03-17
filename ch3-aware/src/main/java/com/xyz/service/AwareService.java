@@ -36,7 +36,7 @@ public class AwareService implements BeanNameAware, ResourceLoaderAware {
 
     public void outputResource() throws IOException {
         System.out.println(beanName);
-        Resource mResource = resourceLoader.getResource("classpath:com/xyz/test.txt");
+        Resource mResource = resourceLoader.getResource("classpath:/test.txt");
         System.out.println(org.apache.commons.io.IOUtils.toString(mResource.getInputStream()));
     }
 }

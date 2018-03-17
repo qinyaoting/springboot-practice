@@ -31,6 +31,7 @@ public class JavaConfig {   //配置类, 其中可以有0个或多个bean对象
         return useFunctionService;
     }*/
 
+    // 与上边的方法是同一个效果
     @Bean
     public UseFunctionService useFunctionService(FunctionService functionService) {
         UseFunctionService useFunctionService = new UseFunctionService();

@@ -11,7 +11,7 @@ package com.xyz.service;
 // 2. 没有用@Service
 public class UseFunctionService {
 
-    // 3. m没有用@Autowired注入functionService
+    // 3. 没有用@Autowired注入functionService
     private FunctionService functionService;
 
     public void setFunctionService(FunctionService functionService) {

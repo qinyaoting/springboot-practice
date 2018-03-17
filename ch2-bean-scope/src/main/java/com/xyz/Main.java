@@ -34,7 +34,7 @@ public class Main {
         PrototypeService p2 =
                 context.getBean(PrototypeService.class);
 
-        System.out.println("s1于s2是否相等:" + s1.equals(s2));
-        System.out.println("p1于p2是否相等:" + p1.equals(p2));
+        System.out.println("s1于s2是否相等:" + s1.equals(s2));   //true
+        System.out.println("p1于p2是否相等:" + p1.equals(p2));   //false
     }
 }

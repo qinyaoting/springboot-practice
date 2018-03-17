@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * Description:
  */
 @Component
-public class DemoListener implements ApplicationListener<DemoEvent> {
+public class MessageListener implements ApplicationListener<DemoEvent> {
     @Override
     public void onApplicationEvent(DemoEvent demoEvent) {
         System.out.println(demoEvent.getMsg());

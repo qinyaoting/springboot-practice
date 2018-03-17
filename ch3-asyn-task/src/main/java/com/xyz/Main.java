@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        // 执行异步任务, 配置文件中初始化一个线程池,
+        // 执行异步任务, 配置类中初始化一个线程池,
         // 在service给需要异步执行的方法上添加注解
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(TaskExecutorConfig.class);

@@ -31,13 +31,15 @@ public class LogAspect {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         Action action = method.getAnnotation(Action.class);
-        System.out.println("注解式拦截" + action.name());
+        System.out.println("拦截DemoAnnotationService:" + action.name());
     }
 
     /**
+     * execution使用方法解释:
+     *
      * 星号后边有个空格，　星号表示返回类型是任意
      * 后边是包名
-     * 第二个星号表示类名
+     * DemoMethodService可以用星号代替, 表示包下全部类
      *　*(..):最后这个星号表示方法名，*号表示所有的方法，后面括弧里面表示方法的参数，两个句点表示任何参数。
      */
 
@@ -45,6 +47,6 @@ public class LogAspect {
     public void before(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
-        System.out.println("方法规则式拦截" + method.getName());
+        System.out.println("拦截DemoMethodService:" + method.getName());
     }
 }

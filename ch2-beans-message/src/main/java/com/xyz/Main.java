@@ -1,7 +1,7 @@
 package com.xyz;
 
 import com.xyz.conf.EventConfig;
-import com.xyz.event.DemoPublisher;
+import com.xyz.event.MessagePublisher;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -21,7 +21,7 @@ public class Main {
 
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(EventConfig.class);
-        DemoPublisher demoPublisher = context.getBean(DemoPublisher.class);
+        MessagePublisher demoPublisher = context.getBean(MessagePublisher.class);
         demoPublisher.publish();
         context.close();
     }

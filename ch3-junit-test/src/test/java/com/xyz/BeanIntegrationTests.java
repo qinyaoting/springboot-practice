@@ -28,7 +28,7 @@ public class BeanIntegrationTests {
 
     @Test
     public void prodInject() {
-        String expected = "prod";
+        String expected = "dev";
         String actual = testBean.getContent();
         Assert.assertEquals(expected, actual);
     }
