@@ -24,6 +24,7 @@
         <module>ch3-conditional</module>
         <module>ch3-combined-annotation</module>
         <module>ch3-junit-test</module>
+        <module>ch4-start-mvc</module>
     </modules>
 
 
