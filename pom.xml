@@ -25,6 +25,8 @@
         <module>ch3-combined-annotation</module>
         <module>ch3-junit-test</module>
         <module>ch4-start-mvc</module>
+        <module>ch4-web-interceptor</module>
+        <module>ch4-controller-advice</module>
     </modules>
 
 
