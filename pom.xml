@@ -27,6 +27,7 @@
         <module>ch4-start-mvc</module>
         <module>ch4-web-interceptor</module>
         <module>ch4-controller-advice</module>
+        <module>ch4-upload-file</module>
     </modules>
 
 
