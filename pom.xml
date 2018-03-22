@@ -28,6 +28,7 @@
         <module>ch4-web-interceptor</module>
         <module>ch4-controller-advice</module>
         <module>ch4-upload-file</module>
+        <module>ch4-web-sse</module>
     </modules>
 
 
