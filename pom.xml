@@ -29,6 +29,7 @@
         <module>ch4-controller-advice</module>
         <module>ch4-upload-file</module>
         <module>ch4-web-sse</module>
+        <module>ch6-retry</module>
     </modules>
 
 
