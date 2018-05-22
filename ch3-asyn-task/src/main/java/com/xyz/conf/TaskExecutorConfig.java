@@ -27,7 +27,7 @@ public class TaskExecutorConfig implements AsyncConfigurer {    //2.实现方法
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         executor.setCorePoolSize(5);
         executor.setMaxPoolSize(10);
-        executor.setQueueCapacity(25);
+        executor.setQueueCapacity(250);
         executor.initialize();
         return executor;        //创建线程池
     }

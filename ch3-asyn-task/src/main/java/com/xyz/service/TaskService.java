@@ -16,11 +16,21 @@ public class TaskService {
 
     @Async
     public void exeAsyncTasks(Integer i) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println("执行异步任务:" + i);
     }
 
     @Async
     public void exeAsyncTasksPlus(Integer i) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println("执行异步任务2:" + i);
     }
 }

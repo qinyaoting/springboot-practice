@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class App {
 
-    @Value("${book.author}")
+    @Value("${book.author}")        //221. 通过@Value注解, 读取配置文件中的属性
     private String bookAuthor;
 
     @Value("${book.name}")

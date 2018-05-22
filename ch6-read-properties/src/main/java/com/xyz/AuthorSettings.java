@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * Description:
  */
 @Component
-@ConfigurationProperties(prefix = "author")
+@ConfigurationProperties(prefix = "author")     //222. 配置文件中有author.name author.age两个属性, 通过ConfigurationProperties自动装配到bean中
 public class AuthorSettings {
 
     private String name;
