@@ -1,6 +1,5 @@
 package com.xyz;
 
-import com.xyz.conf.JavaConfig;
 import com.xyz.service.UseFunctionService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

@@ -31,6 +31,8 @@
         <module>ch4-web-sse</module>
         <module>ch6-retry</module>
         <module>ch6-http-encoding</module>
+        <module>ch6-config-bean</module>
+        <module>ch7-use-thymeleaf</module>
     </modules>
 
 

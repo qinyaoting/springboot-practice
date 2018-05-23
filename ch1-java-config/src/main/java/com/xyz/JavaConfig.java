@@ -1,4 +1,4 @@
-package com.xyz.conf;
+package com.xyz;
 
 import com.xyz.service.FunctionService;
 import com.xyz.service.UseFunctionService;

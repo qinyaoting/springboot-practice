@@ -1,8 +1,7 @@
-package com.xyz.conf;
+package com.xyz;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.retry.annotation.EnableRetry;
 
 /**
  * Created with IntelliJ IDEA.
