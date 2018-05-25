@@ -16,7 +16,7 @@ import java.util.Date;
  * Description:
  */
 @Service
-@PropertySource("classpath:job.properties")
+
 public class ScheduledTaskService {
 
     private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");

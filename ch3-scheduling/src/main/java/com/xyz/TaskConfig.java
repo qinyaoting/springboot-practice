@@ -2,6 +2,7 @@ package com.xyz;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
@@ -15,5 +16,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @Configuration
 @ComponentScan("com.xyz")
 @EnableScheduling
+@PropertySource("classpath:job.properties")
 public class TaskConfig {
 }
