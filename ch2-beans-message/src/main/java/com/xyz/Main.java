@@ -1,6 +1,5 @@
 package com.xyz;
 
-import com.xyz.conf.EventConfig;
 import com.xyz.event.MessagePublisher;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

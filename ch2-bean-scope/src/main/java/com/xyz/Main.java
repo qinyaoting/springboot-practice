@@ -1,7 +1,5 @@
 package com.xyz;
 
-import com.sun.deploy.net.protocol.ProtocolType;
-import com.xyz.conf.ScopeConfig;
 import com.xyz.service.PrototypeService;
 import com.xyz.service.SingleService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

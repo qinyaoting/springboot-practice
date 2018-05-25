@@ -1,6 +1,5 @@
 package com.xyz;
 
-import com.xyz.conf.BeanConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

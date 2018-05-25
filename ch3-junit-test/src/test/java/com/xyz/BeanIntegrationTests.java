@@ -1,7 +1,6 @@
 package com.xyz;
 
 import com.xyz.bean.TestBean;
-import com.xyz.conf.BeanConfig;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

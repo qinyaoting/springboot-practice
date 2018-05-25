@@ -33,6 +33,8 @@
         <module>ch6-http-encoding</module>
         <module>ch6-config-bean</module>
         <module>ch7-use-thymeleaf</module>
+        <module>ch7-customize-container</module>
+        <module>ch7-use-webstock</module>
     </modules>
 
 

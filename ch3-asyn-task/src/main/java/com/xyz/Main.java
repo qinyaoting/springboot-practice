@@ -1,6 +1,5 @@
 package com.xyz;
 
-import com.xyz.conf.TaskExecutorConfig;
 import com.xyz.service.TaskService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

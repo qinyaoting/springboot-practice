@@ -1,8 +1,6 @@
 package com.xyz;
 
-import com.xyz.conf.ConditionConfig;
 import com.xyz.service.ListService;
-import com.xyz.service.WindowsService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

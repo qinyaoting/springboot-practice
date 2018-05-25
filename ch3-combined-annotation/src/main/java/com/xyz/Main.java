@@ -1,6 +1,5 @@
 package com.xyz;
 
-import com.xyz.conf.DemoConfig;
 import com.xyz.service.DemoService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

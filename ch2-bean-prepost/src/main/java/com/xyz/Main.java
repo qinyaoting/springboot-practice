@@ -1,6 +1,5 @@
 package com.xyz;
 
-import com.xyz.conf.PrePostConfig;
 import com.xyz.prepost.BeanWayService;
 import com.xyz.prepost.JSR250Service;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

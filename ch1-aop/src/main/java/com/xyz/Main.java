@@ -2,7 +2,6 @@ package com.xyz;
 
 import com.xyz.aop.DemoAnnotationService;
 import com.xyz.aop.DemoMethodService;
-import com.xyz.conf.AopConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

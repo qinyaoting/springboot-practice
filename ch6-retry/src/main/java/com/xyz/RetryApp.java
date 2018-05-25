@@ -36,5 +36,8 @@ public class RetryApp {
         // TODO 09
         // 批次保存到mysql
 
+        // TODO 08
+        // 不停向一个队列中写日志, 队列满足到75%时候往本地写, 或者每5min写一次
+
     }
 }

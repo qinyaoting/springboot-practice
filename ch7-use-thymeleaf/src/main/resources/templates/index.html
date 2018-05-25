@@ -6,6 +6,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="x-ua-compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--默认静态资源都是在resources/static下-->
+    <!--使用thymeleaf引入资源-->
     <link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
     <link th:href="@{bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet" />
 </head>
@@ -17,7 +19,7 @@
         <h3 class="panel-title">访问model</h3>
     </div>
     <div class="panel-body">
-        <span th:text="${singlePerson.name}" ></span>
+        <span th:text="${singlePerson.name}" ></span><!--访问model中的值-->
     </div>
 </div>
 
@@ -28,7 +30,7 @@
         </div>
         <div class="panel-body">
             <ul class="list-group">
-                <li class="list-group-item" th:each="person:${people}">
+                <li class="list-group-item" th:each="person:${people}"><!--遍历model中的list-->
                     <span th:text="${person.name}"></span>
                     <span th:text="${person.age}"></span>
                     <button class="btn"
@@ -39,13 +41,16 @@
     </div>
 
 </div>
-<script th:src="@{jquery-3.3.1.min.js}" type="text/javascript"></script>
+<script th:src="@{bootstrap/js/jquery-3.3.1.js}" type="text/javascript"></script>
+<!--在模板中使用js代码-->
 <script th:inline="javascript">
-    var single = {{$singlePerson}};
+    /*<![CDATA[*/
+    var single = /*[[${singlePerson}]]*/ 'default';
     console.log(single.name + ":" + single.age)
     function getName(name) {
         console.log(name);
     }
+    /*]]>*/
 </script>
 </body>
 

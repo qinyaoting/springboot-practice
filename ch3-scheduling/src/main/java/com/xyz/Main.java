@@ -1,7 +1,5 @@
 package com.xyz;
 
-import com.xyz.conf.ScheduledTaskService;
-import com.xyz.conf.TaskConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

@@ -1,6 +1,5 @@
 package com.xyz;
 
-import com.xyz.conf.AwareConf;
 import com.xyz.service.AwareService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
