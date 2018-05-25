@@ -1,5 +1,6 @@
 package com.xyz;
 
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ import java.util.Date;
  * Description:
  */
 @Service
+@PropertySource("classpath:job.properties")
 public class ScheduledTaskService {
 
     private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
@@ -27,5 +29,11 @@ public class ScheduledTaskService {
     @Scheduled(cron = "0 11 15 ? * *")
     public void fixTimeExecurot() {
         System.out.println("固定时间执行:" + simpleDateFormat.format(new Date()));
+    }
+
+    // 从属性文件中读取cron
+    @Scheduled(cron="${job.schedule}")
+    public void fromProperties() {
+        System.out.println("从属性文件中读取cron" + simpleDateFormat.format(new Date()));
     }
 }

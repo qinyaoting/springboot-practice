@@ -15,6 +15,7 @@ public class Main {
     public static void main(String[] args) {
 
         // 计划任务, 可以在固定的时间执行某个任务, 可以固定的频率(比如每隔5秒)执行某个任务
+        // cron表达式 可以写在属性文件中
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(TaskConfig.class);
 
