@@ -4,6 +4,7 @@ import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletCont
 import org.springframework.boot.context.embedded.EmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.boot.context.embedded.ErrorPage;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
@@ -19,15 +20,13 @@ import java.util.concurrent.TimeUnit;
  * To change this template use File | Settings | File Templates.
  * Description:
  */
-@Component
+//@Component
 public class CustomServletContainer implements EmbeddedServletContainerCustomizer {     //241.
 
     @Override
     public void customize(ConfigurableEmbeddedServletContainer container) {
         container.setPort(8888);
-        Set set = Collections.emptySet();
-        set.add(new ErrorPage(HttpStatus.NOT_FOUND, "/404.html"));
-        container.setErrorPages(set);
+        container.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND, "/404.html"));
         container.setSessionTimeout(10, TimeUnit.SECONDS);
     }
 }
