@@ -3,6 +3,12 @@ package com.xyz.app;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,12 +18,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * To change this template use File | Settings | File Templates.
  * Description:
  */
+@Controller
 @SpringBootApplication
-@EnableAutoConfiguration
 public class Main {
 
-    // TODO
+    // TODO-
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
+    }
+
+    @RequestMapping("/ws")
+    public String index(Model model) {
+        return "ws";
     }
 }

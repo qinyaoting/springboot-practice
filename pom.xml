@@ -35,6 +35,10 @@
         <module>ch7-use-thymeleaf</module>
         <module>ch7-customize-container</module>
         <module>ch7-use-webstock</module>
+        <module>chf1-springboot-test</module>
+        <module>ch0-common</module>
+        <module>ch3-scheduling-springboot</module>
+        <module>ch7-https</module>
     </modules>
 
 

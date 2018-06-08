@@ -1,5 +1,7 @@
 package com.xyz;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Created with IntelliJ IDEA.
  * User: chin

@@ -21,23 +21,45 @@
     </div>
 </div>
 </body>
-<script th:src="@{stockjs.min.js}"></script>
+<script th:src="@{sockjs.min.js}"></script>
 <script th:src="@{stomp.min.js}"></script>
-<script th:src="@{jquery.min.js}"></script>
+<script th:src="@{jquery-3.3.1.js}"></script>
 <script type="text/javascript">
-    function connect() {
 
+    var client = null;
+    function setConnected(connected) {
+        document.getElementById('connect').isDisabled = connected;
+        document.getElementById('disconnect').isDisabled = !connected;
+        document.getElementById('conversationDiv').style.visibility=connected?'visiable':'hidden';
+        $('#response').html();
+    }
+
+    function connect() {
+        var socket = new SockJS('/endpointWisely');
+        client = Stomp.over(socket);
+        client.connect({}, function (frame) {
+            setConnected(true);
+            console.info('Connected:'+frame);
+            client.subscribe('/topic/getResponse', function (response) {
+                showResponse(JSON.parse(response.body).responseMessage);
+            });
+        });
     }
 
     function disconnect() {
-
+        if(client != null)
+            client.disconnect();
+        setConnected(false);
+        console.info("Disconnected")
     }
 
     function sendName() {
-
+        var name = $('#name').val()
+        client.send("/welcome",{}, JSON.stringify({'name':name}))
     }
     function showResponse(message) {
-
+        var response = $("response");
+        response.html(message);
     }
 </script>
 </html>
