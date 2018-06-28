@@ -1,0 +1,35 @@
+spring:
+    profiles:
+        active: test
+#    jackson:
+#        time-zone: GMT+8
+
+# 个人
+person:
+  type: woman
+  name: lucy
+  age: 22
+
+
+# 工位
+seat:
+  logo: knife
+  name: bitsize
+  person:
+    name: jack
+    gender: M
+
+# group
+group:
+  logo: ega
+  name: fire
+  guys:
+    - guy:
+      name: jack
+      gender: M
+    - guy:
+      name: lucy
+      gender: F
+
+
+

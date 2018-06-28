@@ -1,0 +1,8 @@
+type: team
+logo: ega
+name: fire
+resources:
+  - type: hr
+    amount: 200
+  - type: capital
+    fund: 10.00

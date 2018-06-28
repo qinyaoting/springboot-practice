@@ -1,0 +1,8 @@
+spring:
+    profiles:
+        active: test
+    jackson:
+        time-zone: GMT+8
+
+server:
+  port: 8080
