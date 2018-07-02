@@ -19,7 +19,7 @@ public class TeamProperties extends AbsResource {
     public String name;
     public String logo;
 
-    public List<AbsResource> resources;
+    public List<AbsResource> resources;         //存放资源抽象类的集合
 
     public TeamProperties(){
         resources = Lists.newArrayList();

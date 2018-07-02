@@ -21,17 +21,20 @@ import java.io.IOException;
 @SpringBootApplication
 public class App {
 
+
+    // 如何在yml文件中编写配置, 自动转化为java对象
+
     @Autowired
-    private PersonProperties person;  // 简单的yml转java对象
+    private PersonProperties person;    // yml配置转java对象
 
     @Autowired
     private SeatProperties seat;        // 工位中包括员工的信息
 
     @Autowired
-    private GroupProperties group;        // team包含列表,列表中是员工
+    private GroupProperties group;        // group包含列表,列表中是员工
 
     @Autowired
-    private TeamProperties team;        // 如何用yaml数据转为抽象对象的列表
+    private TeamProperties team;        // 如何用yml数据转为抽象对象的列表, 配置示例在team.yml中
 
     @RequestMapping("/")
     String index() {

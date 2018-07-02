@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
                 @JsonSubTypes.Type(value = CapitalResource.class, name = "capital")})
 public abstract class AbsResource {
 
-    protected String type;
+    protected String type;      //通过type表示区分子类
 
     public String getType() {
         return type;

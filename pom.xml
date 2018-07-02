@@ -39,6 +39,7 @@
         <module>ch0-common</module>
         <module>ch3-scheduling-springboot</module>
         <module>ch7-https</module>
+        <module>chf2-yml-bean</module>
     </modules>
 
 
