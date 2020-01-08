@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ScanConfig {
+
     private final ApplicationContext context;
 
     @Autowired
@@ -17,6 +18,7 @@ public class ScanConfig {
 
     @Bean
     public ActorSystem createSystem() {
+        // 4-ActorSystem获得系统
         ActorSystem system = ActorSystem.create("system");
         SpringExtProvider.getInstance().get(system).init(context);
         return system;

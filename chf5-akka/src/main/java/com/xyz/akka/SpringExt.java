@@ -5,10 +5,10 @@ import akka.actor.Props;
 import org.springframework.context.ApplicationContext;
 
 public class SpringExt implements Extension {
+
     private ApplicationContext context;
 
     public void init(ApplicationContext context) {
-        System.out.println("applicationContext初始化...");
         this.context = context;
     }
 
@@ -18,7 +18,7 @@ public class SpringExt implements Extension {
      * @param beanName actor bean 名称
      * @return props
      */
-    public Props create(String beanName) {
+    public Props create(String beanName) {      //2-根据bean名称构造Props
         return Props.create(DIProducer.class, this.context, beanName);
     }
 }
